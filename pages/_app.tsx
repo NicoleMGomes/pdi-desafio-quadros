@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
+import Header from '../components/Header'
 import GlobalStyles from '../styles/GlobalStyles'
 import { ThemeName, themes, ThemeType } from '../styles/themes'
 
@@ -19,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
       <ThemeProvider theme={currentTheme}>
         <GlobalStyles />
-        {/* Your header here*/}
+        <Header />
         <Component {...pageProps} />
         {/* Your footer here*/}
       </ThemeProvider>
