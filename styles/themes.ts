@@ -1,7 +1,12 @@
 export const themes = {
   main: {
-    primary: '#fff',
-    secondary: '#586069',
+    primary: '#F29441',
+    secondary: '#0F528C',
+    'secondary-dark': '#062540',
+    success: '#218739',
+    danger: '#dc3545',
+    warning: '#ffc107',
+    info: '#128091',
     black: '#1b1f23',
     gray: '#586069',
     'gray-light': '#6a737d',

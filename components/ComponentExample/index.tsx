@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
+import UploadInput from '../UploadInput'
 import { Container } from './styles'
 
-interface IProps {
-  name: string
-}
-const ComponentExample: React.FC<IProps> = ({ name }) => {
+const ComponentExample: React.FC = () => {
+  const [url, setUrl] = useState<string>()
+
+  function onImageUpload(formData: FormData, imageFile: File) {
+    // TODO: aplicar efeito na imagem
+    console.log(formData)
+    setUrl(URL.createObjectURL(imageFile))
+  }
+
   return (
     <Container>
-      <h2>Welcome {name}</h2>
+      <UploadInput onImageUpload={onImageUpload} maxFiles={1} />
+
+      <select name="select">
+        <option value="valor1">Espelhamento vertical</option>
+        <option value="valor1">Espelhamento horizonal</option>
+        <option value="valor1">Deslocamento horizonal</option>
+        <option value="valor1">Redimensionamento</option>
+        <option value="valor1">Rotacionamento</option>
+      </select>
+
+      <div>
+        <img src={url || ''} height={200} width={200}></img>
+        <img src={url || ''} height={200} width={200}></img>
+      </div>
     </Container>
   )
 }

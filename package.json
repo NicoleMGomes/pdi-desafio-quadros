@@ -28,6 +28,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-dropzone": "^11.3.4",
     "styled-components": "latest"
   },
   "devDependencies": {
