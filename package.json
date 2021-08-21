@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "axios": "latest",
+    "jimp": "^0.16.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

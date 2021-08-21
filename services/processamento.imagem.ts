@@ -1,5 +1,49 @@
-export function redimensionamento(input: any, sizeX: any, sizeY: any): any {
-  const image = input
+import Jimp from 'jimp'
+
+export function aplicaEfeitoImagem(efeito: string, url: string) {
+  console.log(url)
+  //TODO: ler da url recebida: ex: blob:http://localhost:3000/c89ddaaf-d5a0-4ace-ac1c-c4c95aaf3335
+  // está lendo de um arquivo que criei na raiz do projeto
+  Jimp.read('glasses - Copia.png')
+    .then((image) => {
+      // Do stuff with the image.
+      definirEfeito(efeito, image)
+    })
+    .catch((err) => {
+      console.log('error ', err)
+
+      // Handle an exception.
+    })
+}
+
+function definirEfeito(efeito: string, image: any) {
+  if (efeito.match('espver') !== null) {
+    console.log('aplicando efeito espelhamento vertical')
+    espelhamentoVertical(image)
+  } else if (efeito.match('esphor') !== null) {
+    console.log('aplicando efeito espelhamento horizontal')
+    espelhamentoHorizonal(image)
+  } else if (efeito.match('rotaci') !== null) {
+    console.log('aplicando efeito rotacionamento')
+    rotacionamento(image, 90)
+  } else if (efeito.match('deshor') !== null) {
+    console.log('aplicando efeito deslocamento horizontal')
+    deslocamento(image, 10, 0)
+  } else if (efeito.match('redime') !== null) {
+    console.log('aplicando efeito redimensionamento')
+    redimensionamento(image, image.bitmap.width, image.bitmap.height)
+  } else {
+    console.log('nenhum efeito cadastrado recebido')
+  }
+}
+
+export function redimensionamento(imagem: any, sizeX: any, sizeY: any): any {
+  //exibe os valores de rgb da cor do pixel x: 393, y: 827
+  console.log('red: ', imagem.bitmap.data[imagem.getPixelIndex(393, 827)])
+  console.log('green: ', imagem.bitmap.data[imagem.getPixelIndex(393, 827) + 1])
+  console.log('blue: ', imagem.bitmap.data[imagem.getPixelIndex(393, 827) + 2])
+
+  const image = imagem
   const resultImage = null //ImageFactory.buildEmptyImage(image)
   transform(image, resultImage, [
     [1 / sizeX, 0, 0],
