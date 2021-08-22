@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "axios": "latest",
+    "formidable": "^1.2.2",
     "jimp": "^0.16.1",
     "next": "latest",
     "react": "latest",
@@ -33,6 +34,7 @@
     "styled-components": "latest"
   },
   "devDependencies": {
+    "@types/formidable": "^1.2.3",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

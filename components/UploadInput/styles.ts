@@ -23,7 +23,7 @@ export const Drop = styled.div<IProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20%;
+  height: 30%;
   width: 100%;
   padding: 20px;
   border-width: 4px;

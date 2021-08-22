@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ComponentExample from '../components/ComponentExample'
+import ImageTransform from '../components/ImageTransform'
 
 const IndexPage: React.FC = () => (
   <main>
@@ -7,7 +7,7 @@ const IndexPage: React.FC = () => (
       <title>Desafio dos Quadros</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <ComponentExample />
+    <ImageTransform />
   </main>
 )
 

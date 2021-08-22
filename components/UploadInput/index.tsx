@@ -9,7 +9,7 @@ const getColor = (props: any) => {
   if (props.isDragReject) {
     return 'var(--danger)'
   }
-  return 'var(--info)'
+  return 'var(--secondary)'
 }
 
 interface Props {
