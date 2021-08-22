@@ -1,12 +1,14 @@
 ## ![Desafio dos Quadros](/public/banner.png)
 
-Desafio dos Quadros é um trabalho realizado para a cadeira Processamento Digital de Imagens do curso de gradução Ciência da Computação da Universidade Feevale. A aplicação contempla a implementação de cinco operações básicas realizadas em uma imagem de entrada, sendo elas:
+Desafio dos Quadros é um trabalho realizado para a cadeira Processamento Digital de Imagens do curso de gradução Ciência da Computação da Universidade Feevale. A aplicação contempla a implementação de seis operações básicas realizadas em uma imagem de entrada, sendo elas:
 
-* Espelhamento vertical
-* Espelhamento horizonal
-* Deslocamento horizonal
-* Redimensionamento
-* Rotacionamento
+* Espelhar verticalmente
+* Espelhar horizontalmente
+* Deslocar horizontalmente
+* Aumentar
+* Diminuir
+* Rotacionar
+
 ## Autoras
 
 * Isadora Soares Guedes

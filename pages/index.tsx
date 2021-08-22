@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import ComponentCalculoImagem from '../components/ComponentCalculoImagem'
-import ComponentExample from '../components/ComponentExample'
+import ImageTransform from '../components/ImageTransform'
 
 const IndexPage: React.FC = () => (
   <main>
@@ -8,11 +7,7 @@ const IndexPage: React.FC = () => (
       <title>Desafio dos Quadros</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <ComponentExample />
-    <ComponentCalculoImagem
-      matriz={[1, 2, 3]}
-      imagem={[3, 2, 1]}
-    ></ComponentCalculoImagem>
+    <ImageTransform />
   </main>
 )
 
