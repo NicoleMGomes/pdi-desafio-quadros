@@ -33,5 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-public/output/*.jpg
-public/output/*.png
+public/input/*
+public/output/*

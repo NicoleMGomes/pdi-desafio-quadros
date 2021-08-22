@@ -36,7 +36,7 @@ export default async (
   await runMiddleware(req, res, cors)
 
   if (req.method === 'POST') {
-    const form = new formidable.IncomingForm()
+    const form = new formidable.IncomingForm({ uploadDir: './public/input' })
     //@ts-ignore
     form.parse(req, async (err, fields, files) => {
       //@ts-ignore
