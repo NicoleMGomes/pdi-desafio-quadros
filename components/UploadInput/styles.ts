@@ -32,6 +32,7 @@ export const Drop = styled.div<IProps>`
   border-style: dashed;
   background-color: var(--light-white);
   color: var(--secondary-dark);
+  font-size: 14px;
   outline: none;
   transition: border 0.24s ease-in-out;
   &:hover {
