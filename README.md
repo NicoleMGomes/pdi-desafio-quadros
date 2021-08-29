@@ -23,7 +23,7 @@ Para iniciar basta clonar o repositório e rodar `npm install && npm run dev`:
 
 ## Acesso 
 
-A aplicação pode ser acessada na Vercel através do seguinte link: https://pdi-desafio-quadros.vercel.app
+A aplicação pode ser acessada no Heroku através do seguinte link: https://desafio-quadros.herokuapp.com
 
 
 
