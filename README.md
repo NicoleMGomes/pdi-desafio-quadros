@@ -16,7 +16,7 @@ Desafio dos Quadros é um trabalho realizado para a cadeira Processamento Digita
 
 ## Requisitos
 
-* Versão +12 de Node
+* Versão +10 de Node
 ## Execução local
 
 Para iniciar basta clonar o repositório e rodar `npm install && npm run dev`:
