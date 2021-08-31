@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { api } from '../../services/api'
 import UploadInput from '../UploadInput'
 import {
@@ -15,11 +15,7 @@ const ImageTransform: React.FC = () => {
   const [efeito, setEfeito] = useState('espelhar_verticalmente')
   const [formData, setFormData] = useState<FormData>()
   const [urlOutput, setUrlOutput] = useState<string>()
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    setLoading(false)
-  }, [urlOutput])
+  const [loading, setLoading] = useState<boolean>(false)
 
   function onImageUpload(formData: FormData, imageFile: File) {
     setUrl(URL.createObjectURL(imageFile))
@@ -34,14 +30,21 @@ const ImageTransform: React.FC = () => {
     formData?.append('efeito', efeito)
     setLoading(true)
 
-    const { data } = await api.post<{ url: string }>(
-      '/api/processamento-imagem',
-      formData,
-      {
-        headers: { 'content-type': 'multipart/form-data' },
-      }
-    )
-    setUrlOutput(data.url)
+    try {
+      const { data } = await api.post<{ url: string }>(
+        '/api/processamento-imagem',
+        formData,
+        {
+          headers: { 'content-type': 'multipart/form-data' },
+        }
+      )
+
+      setUrlOutput(data.url)
+      setLoading(false)
+    } catch {
+      setLoading(false)
+      alert('Ocorreu um erro durante o processamento da requisição')
+    }
   }
 
   return (
