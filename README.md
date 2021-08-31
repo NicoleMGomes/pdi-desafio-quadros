@@ -13,6 +13,10 @@ Desafio dos Quadros é um trabalho realizado para a cadeira Processamento Digita
 
 * Isadora Soares Guedes
 * Nicole Maciel Gomes
+
+## Requisitos
+
+* Versão +12 de Node
 ## Execução local
 
 Para iniciar basta clonar o repositório e rodar `npm install && npm run dev`:
