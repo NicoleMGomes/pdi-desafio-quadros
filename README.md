@@ -20,11 +20,3 @@ Para iniciar basta clonar o repositório e rodar `npm install && npm run dev`:
     git clone https://github.com/NicoleMGomes/pdi-desafio-quadros.git
     npm install
     npm run dev
-
-## Acesso 
-
-A aplicação pode ser acessada no Heroku através do seguinte link: https://desafio-quadros.herokuapp.com
-
-
-
-
